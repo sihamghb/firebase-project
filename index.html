@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Mini News Feed</title>
+
+  <!-- Firebase v9 compat -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+   <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <h1>Firebase Mini News Feed</h1>
+
+  <!-- Auth Area -->
+  <div id="auth-area">
+    <h2>Register</h2>
+    <input type="email" id="signup-email" placeholder="Email" required>
+    <input type="password" id="signup-password" placeholder="Password" required>
+    <button id="signup-btn">Register</button>
+
+    <h2>Login</h2>
+    <input type="email" id="login-email" placeholder="Email" required>
+    <input type="password" id="login-password" placeholder="Password" required>
+    <button id="login-btn">Login</button>
+  </div>
+
+  <!-- Feed Area -->
+  <div id="feed-area">
+    <div>
+      <span id="username"></span>
+      <button id="logout-btn">Logout</button>
+    </div>
+
+    <h3>Post a message</h3>
+    <input type="text" id="message-input" placeholder="Write a message...">
+    <button id="post-btn">Post</button>
+
+    <h3>Messages</h3>
+    <div id="messages-list"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
