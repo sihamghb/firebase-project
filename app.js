@@ -71,6 +71,7 @@ postBtn.onclick = () => {
   db.collection("messages").add({
     text: text,
     userId: user.uid,
+    userEmail: user.email,
     timestamp: firebase.firestore.FieldValue.serverTimestamp()
   });
 
